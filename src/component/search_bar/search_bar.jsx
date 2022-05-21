@@ -1,7 +1,8 @@
-import React , {useRef} from 'react';
+import React , {useRef,memo} from 'react';
 import styles from './search_bar.module.css';
 
-const SearchBar = ({onSearch}) => {
+const SearchBar = memo(
+    ({onSearch}) => {
     const onClick = () =>{
         handleSearch();
     };
@@ -29,6 +30,7 @@ const SearchBar = ({onSearch}) => {
             </button>
         </header>
             )
-};
+    }
+);
 
 export default SearchBar;
